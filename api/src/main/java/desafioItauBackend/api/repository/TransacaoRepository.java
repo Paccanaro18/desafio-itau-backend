@@ -6,16 +6,16 @@ import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.stream.DoubleStream;
 
 @Repository
 public class TransacaoRepository {
 
 
-    private final List<TransacaoRequest> transacoes = new ArrayList<>();
+    private final List<TransacaoRequest> transacoes = new CopyOnWriteArrayList<>();
 
 
     public void add(TransacaoRequest transacaoRequest) {
