@@ -26,7 +26,7 @@ public class EstatisticaRequest {
         this.sum = doubleSummaryStatistics.getSum();
         this.avg = doubleSummaryStatistics.getAverage();
         this.min = doubleSummaryStatistics.getMin() == Double.POSITIVE_INFINITY ? 0 : doubleSummaryStatistics.getMin();
-        this.max = doubleSummaryStatistics.getMax() == Double.POSITIVE_INFINITY ? 0 : doubleSummaryStatistics.getMax();
+    this.max = doubleSummaryStatistics.getMax() == Double.NEGATIVE_INFINITY ? 0 : doubleSummaryStatistics.getMax();
     }
 
 }

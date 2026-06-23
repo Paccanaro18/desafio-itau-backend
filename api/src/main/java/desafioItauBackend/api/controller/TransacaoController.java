@@ -13,15 +13,14 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/transacao")
 public class TransacaoController {
+
+
     private TransacaoRepository transacaoRepository;
-
-    public TransacaoController(TransacaoRepository transacaoRepository) {
-        this.transacaoRepository = transacaoRepository;
-    }
-
     private TransacaoService transacaoService;
 
-    public TransacaoController(TransacaoService transacaoService) {
+    public TransacaoController(TransacaoRepository transacaoRepository,
+                               TransacaoService transacaoService) {
+        this.transacaoRepository = transacaoRepository;
         this.transacaoService = transacaoService;
     }
 
