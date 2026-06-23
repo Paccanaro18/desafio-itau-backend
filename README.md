@@ -35,3 +35,26 @@ Retorna estatísticas das transações dos últimos 60 segundos.
 - Transações com data futura não são aceitas
 - Campos `valor` e `dataHora` são obrigatórios
 - Todos os dados são armazenados em memória
+
+- ## 🌐 API em produção
+
+A API está disponível publicamente e pode ser testada sem precisar rodar o projeto localmente.
+
+**Base URL:** https://desafio-itau-backend-production.up.railway.app
+
+### Exemplos de uso
+
+**POST /transacao**
+POST https://desafio-itau-backend-production.up.railway.app/transacao
+Content-Type: application/json
+
+{
+    "valor": 123.45,
+    "dataHora": "2026-06-23T17:00:00-03:00"
+}
+
+**DELETE /transacao**
+DELETE https://desafio-itau-backend-production.up.railway.app/transacao
+
+**GET /estatistica**
+GET https://desafio-itau-backend-production.up.railway.app/estatistica
